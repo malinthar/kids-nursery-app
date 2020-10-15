@@ -3,17 +3,17 @@ import '@firebase/auth';
 import '@firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyAOWHBpPhKoNhcGFKHH_Q_0AtL2gV-imgQ',
-  authDomain: 'production-a9404.firebaseapp.com',
-  databaseURL: 'https://production-a9404.firebaseio.com',
-  projectId: 'production-a9404',
-  storageBucket: 'production-a9404.appspot.com',
-  messagingSenderId: '525472070731',
-  appId: '1:525472070731:web:ee873bd62c0deb7eba61ce',
+  apiKey: "AIzaSyDl-qCdLPnmsUPMIrll7CKFyEgo1dxNohY",
+  authDomain: "nursery-d5356.firebaseapp.com",
+  databaseURL: "https://nursery-d5356.firebaseio.com",
+  projectId: "nursery-d5356",
+  storageBucket: "nursery-d5356.appspot.com",
+  messagingSenderId: "497100998651",
+  appId: "1:497100998651:web:1694fa50fdfa6d6090ad5e"
 };
 
 if (!firebase.apps.length) {
-    firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig);
 }
 
 export { firebase };

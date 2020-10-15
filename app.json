@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "React Native Firebase",
-    "slug": "react-native-firebase",
+    "name": "Kids",
+    "slug": "Kids-nursery-app",
     "platforms": [
       "ios",
       "android",
@@ -11,7 +11,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/kids.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -24,7 +24,11 @@
     "ios": {
       "supportsTablet": true
     },
-    "description": "Built by the team behind https://www.instamobile.io https://www.iosapptemplates.com https://www.instaflutter.com and https://www.instakotlin.com",
-    "githubUrl": "https://github.com/instamobile/react-native-firebase"
+    "description": "@malinthar",
+    "githubUrl": "",
+    "sdkVersion": "37.0.0",
+    "android": {
+      "package": "io.malinthar.kids.app"
+    }
   }
 }

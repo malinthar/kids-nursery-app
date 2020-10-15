@@ -6,11 +6,6 @@ export default StyleSheet.create({
         flex: 1,
         alignItems: 'center'
     },
-    block: {
-        flexWrap: 'wrap',
-        alignItems: 'flex-start',
-        flexDirection: 'row',
-    },
     formContainer: {
         flexDirection: 'row',
         height: 80,
@@ -41,8 +36,8 @@ export default StyleSheet.create({
         alignItems: "center"
     },
     imgback2: {
-        height: '100%',
-        width: '100%',
+        height: 900,
+        width: 360,
         alignSelf: "center",
         alignItems: "center"
     },
@@ -62,8 +57,7 @@ export default StyleSheet.create({
         alignItems: "center",
         justifyContent: 'center',
         padding: 10,
-        marginTop: 10,
-        marginLeft: 10
+        marginTop: 10
     },
     buttonD: {
         height: 47,

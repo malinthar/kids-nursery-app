@@ -4,11 +4,14 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import styles from './styles';
 import { firebase } from '../../firebase/config'
 
-export default function RegistrationScreen({navigation}) {
+export default function RegistrationScreen({ navigation }) {
     const [fullName, setFullName] = useState('')
     const [email, setEmail] = useState('')
+    const [mobile, setMobile] = useState('')
+    const [address, setAddress] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
+
 
     const onFooterLinkPress = () => {
         navigation.navigate('Login')
@@ -19,7 +22,7 @@ export default function RegistrationScreen({navigation}) {
             alert("Passwords don't match.")
             return
         }
-    
+
         firebase
             .auth()
             .createUserWithEmailAndPassword(email, password)
@@ -35,7 +38,7 @@ export default function RegistrationScreen({navigation}) {
                     .doc(uid)
                     .set(data)
                     .then(() => {
-                        navigation.navigate('Home', {user: data})
+                        navigation.navigate('Home', { user: data })
                     })
                     .catch((error) => {
                         alert(error)
@@ -43,7 +46,7 @@ export default function RegistrationScreen({navigation}) {
             })
             .catch((error) => {
                 alert(error)
-        });
+            });
     }
 
     return (
@@ -70,6 +73,24 @@ export default function RegistrationScreen({navigation}) {
                     placeholderTextColor="#aaaaaa"
                     onChangeText={(text) => setEmail(text)}
                     value={email}
+                    underlineColorAndroid="transparent"
+                    autoCapitalize="none"
+                />
+                <TextInput
+                    style={styles.input}
+                    placeholder='Mobile'
+                    placeholderTextColor="#aaaaaa"
+                    onChangeText={(text) => setMobile(text)}
+                    value={mobile}
+                    underlineColorAndroid="transparent"
+                    autoCapitalize="none"
+                />
+                <TextInput
+                    style={styles.input}
+                    placeholder='Address'
+                    placeholderTextColor="#aaaaaa"
+                    onChangeText={(text) => setAddress(text)}
+                    value={address}
                     underlineColorAndroid="transparent"
                     autoCapitalize="none"
                 />
